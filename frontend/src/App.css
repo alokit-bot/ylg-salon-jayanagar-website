@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.App {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #0f0f10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Premium Burgundy & Gold Theme */
+:root {
+  --primary-burgundy: #8B2635;
+  --secondary-burgundy: #6B1C2A;
+  --accent-gold: #D4AF37;
+  --light-gold: #F4E4C1;
+  --soft-white: #FEFEFE;
+  --cream: #F8F6F3;
+  --text-dark: #2C2C2C;
+  --text-gray: #666666;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, .service-card, .gallery-item, .testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, .service-card:hover, .gallery-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-burgundy);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-burgundy);
+}
+
+/* Image overlay effects */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(139, 38, 53, 0.3), rgba(212, 175, 55, 0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-overlay:hover::after {
+  opacity: 1;
+}
+
+/* Star rating animation */
+.star-icon {
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.star-icon:hover {
+  transform: scale(1.2) rotate(15deg);
+}
